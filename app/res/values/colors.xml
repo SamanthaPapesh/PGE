@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--Colors that Appeared-->
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <!--Colors I Specifically Use-->
+    <color name="white">#FFFFFFFF</color>
+    <color name="shadowTextColor">#121111</color>
+    <color name="PinkText">#ED85EB</color>
+    <color name="Teal">#00BCD4</color>
+    <!--Color Palette 1-->
+    <color name="darkpink">#C342CB</color>
+    <color name="teal">#49AAC0</color>
+    <color name="darkpurple">#4E158F</color>
+    <color name="darknavy">#080C27</color>
+    <color name="lightpurple">#DED9F7</color>
+    <color name="violet">#C391F2</color>
+    <color name="purple1">#C391F2</color>
+    <color name="pink1">#C92F7B</color>
+    <color name="purple3">#7675F6</color>
+    <color name="brightpurple">#583BE8</color>
+    <!--Color Palette 2-->
+    <color name="violet2">#874685</color>
+    <color name="lightblue2">#7BCAF6</color>
+    <color name="pink2">#D679CB</color>
+    <color name="fogblue2">#7896CF</color>
+    <color name="darkerblue2">#327AA9</color>
+    <color name="brightopink2">#D924AF</color>
+    <color name="offwhite">#EEE7F9</color>
+    <color name="fogpurple2">#8486B0</color>
+    <color name="purple2">#A444BC</color>
+    <color name="lightteal2">#46B4C4</color>
+    <color name="lightpurple2">#DFBBF0</color>
+    <color name="darkpurple2">#2C0A33</color>
+    <color name="darkteal2">#286395</color>
+    <color name="teal2">#1395CF</color>
+    <color name="teal3">#4BC7D7</color>
+    <color name="lightteal3">#7AE6F4</color>
+
+</resources>
