@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#303030">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/BTButton"
+                    android:layout_width="40dp"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="35dp"
+                    android:background="@drawable/roundcorner"
+                    android:onClick="BluetoothFunction"
+                    android:padding="3dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/bt_transparent" />
+
+                <TextView
+                    android:id="@+id/bluetooth_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:fontFamily="@font/exo_semibold_italic"
+                    android:lines="2"
+                    android:text="Click to Enable Bluetooth"
+                    android:textColor="@color/teal3"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnFindUnpairedDevices"
+                android:layout_width="wrap_content"
+                android:layout_height='wrap_content'
+                android:text="Discover"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:backgroundTint="@color/teal3"
+                android:textColor="@color/PinkText"
+                android:shadowColor="@color/shadowTextColor"
+                android:shadowDx="4"
+                android:shadowDy="4"
+                android:shadowRadius="2.0"
+                android:textSize="15dp"
+                android:fontFamily="@font/exo_semibold_italic"
+                android:onClick="btnDiscover"/>
+
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnStartConnection"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btnFindUnpairedDevices"
+                android:layout_marginTop="10dp"
+                android:text="Start Connection"
+                android:layout_marginLeft="55dp"/>
+
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/lvNewDevices"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
