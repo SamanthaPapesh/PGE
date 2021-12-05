@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    tools:visibility="visible">
+
+    <RelativeLayout
+        android:id="@+id/activity_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/darkgreybackgroundstripes"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="5dp">
+
+                    <LinearLayout
+                        android:layout_width="180dp"
+                        android:layout_height="320dp"
+                        android:orientation="vertical">
+
+                        <Button
+                            android:id="@+id/LED_button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:layout_marginTop="10dp"
+                            android:autoText="false"
+                            android:fontFamily="@font/exo_semibold_italic"
+                            android:onClick="onClickLED"
+                            android:shadowColor="@color/shadowTextColor"
+                            android:shadowDx="5"
+                            android:shadowDy="5"
+                            android:shadowRadius="2.0"
+                            android:text="LED"
+                            android:textColor="@color/pink2"
+                            android:textSize="24sp"
+                            app:backgroundTint="@color/teal3" />
+
+                        <TextView
+                            android:id="@+id/textView0"
+                            android:layout_width="wrap_content"
+                            android:layout_height="25dp"
+                            android:fontFamily="@font/exo_semibold_italic"
+                            android:lines="2"
+                            android:text="LEDs OFF"
+                            android:textColor="@color/teal3"
+                            android:textSize="16sp" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:orientation="vertical">
+
+                            <Button
+                                android:id="@+id/volumeUPButton"
+                                android:layout_width="85dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="right"
+                                android:fontFamily="@font/exo_semibold_italic"
+                                android:onClick="OnClickVolumeUp"
+                                android:shadowColor="@color/shadowTextColor"
+                                android:shadowDx="5"
+                                android:shadowDy="5"
+                                android:shadowRadius="2.0"
+                                android:text="+"
+                                android:textColor="@color/PinkText"
+                                android:textSize="24sp"
+                                app:backgroundTint="@color/teal3" />
+
+                            <TextView
+                                android:id="@+id/textViewVolume"
+                                android:layout_width="85dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="right"
+                                android:fontFamily="@font/exo_semibold_italic"
+                                android:gravity="center"
+                                android:lines="1"
+                                android:text="Volume"
+                                android:textColor="@color/teal3"
+                                android:textSize="16sp" />
+
+                            <Button
+                                android:id="@+id/volumeDOWNButton"
+                                android:layout_width="85sp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="right"
+                                android:fontFamily="@font/exo_semibold_italic"
+                                android:onClick="OnClickVolumeDown"
+                                android:shadowColor="@color/shadowTextColor"
+                                android:shadowDx="5"
+                                android:shadowDy="5"
+                                android:shadowRadius="2.0"
+                                android:text="-"
+                                android:textColor="@color/PinkText"
+                                android:textSize="24sp"
+                                app:backgroundTint="@color/teal3" />
+
+
+                        </LinearLayout>
+
+                        <Spinner
+                            android:id="@+id/spinner"
+                            android:layout_width="35dp"
+                            android:layout_height="30dp"
+                            android:background="@android:color/transparent"
+                            android:layout_marginTop="10dp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/Mod1Layout"
+                    android:layout_width="75dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="25dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/Mod1Text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:text="31 Hz"
+                        android:textColor="@color/white"
+                        android:textSize="15sp" />
+
+                    <com.google.android.material.slider.Slider
+                        android:id="@+id/Mod1"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="100dp"
+                        android:rotation="270"
+                        android:stepSize="12.0"
+                        android:value="0"
+                        android:valueFrom="-36"
+                        android:valueTo="36" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/Mod2Layout"
+                    android:layout_width="75dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/Mod2Text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:text="63 Hz"
+                        android:textColor="@color/white"
+                        android:textSize="15sp" />
+
+                    <com.google.android.material.slider.Slider
+                        android:id="@+id/Mod2"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="100dp"
+                        android:rotation="270"
+                        android:stepSize="12.0"
+                        android:value="0"
+                        android:valueFrom="-36"
+                        android:valueTo="36" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/Mod3Layout"
+                    android:layout_width="75dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/Mod3Text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:text="125 Hz"
+                        android:textColor="@color/white"
+                        android:textSize="15sp" />
+
+                    <com.google.android.material.slider.Slider
+                        android:id="@+id/Mod3"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="100dp"
+                        android:rotation="270"
+                        android:stepSize="12.0"
+                        android:value="0"
+                        android:valueFrom="-36"
+                        android:valueTo="36" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/Mod4Layout"
+                    android:layout_width="75dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/Mod4Text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:text="250 Hz"
+                        android:textColor="@color/white"
+                        android:textSize="15sp" />
+
+                    <com.google.android.material.slider.Slider
+                        android:id="@+id/Mod4"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="100dp"
+                        android:rotation="270"
+                        android:stepSize="12.0"
+                        android:value="0"
+                        android:valueFrom="-36"
+                        android:valueTo="36" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/Mod5Layout"
+                    android:layout_width="75dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/Mod5Text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:text="500 Hz"
+                        android:textColor="@color/white"
+                        android:textSize="15sp" />
+
+                    <com.google.android.material.slider.Slider
+                        android:id="@+id/Mod5"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="100dp"
+                        android:rotation="270"
+                        android:stepSize="12.0"
+                        android:value="0"
+                        android:valueFrom="-36"
+                        android:valueTo="36" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/Mod6Layout"
+                    android:layout_width="75dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/Mod6Text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:text="1 kHz"
+                        android:textColor="@color/white"
+                        android:textSize="15sp" />
+
+                    <com.google.android.material.slider.Slider
+                        android:id="@+id/Mod6"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="100dp"
+                        android:rotation="270"
+                        android:stepSize="12.0"
+                        android:value="0"
+                        android:valueFrom="-36"
+                        android:valueTo="36" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/Mod7Layout"
+                    android:layout_width="75dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/Mod7Text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:text="2 kHz"
+                        android:textColor="@color/white"
+                        android:textSize="15sp" />
+
+                    <com.google.android.material.slider.Slider
+                        android:id="@+id/Mod7"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="100dp"
+                        android:rotation="270"
+                        android:stepSize="12.0"
+                        android:value="0"
+                        android:valueFrom="-36"
+                        android:valueTo="36" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/Mod8Layout"
+                    android:layout_width="75dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/Mod8Text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:text="4 kHz"
+                        android:textColor="@color/white"
+                        android:textSize="15sp" />
+
+                    <com.google.android.material.slider.Slider
+                        android:id="@+id/Mod8"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="100dp"
+                        android:rotation="270"
+                        android:stepSize="12.0"
+                        android:value="0"
+                        android:valueFrom="-36"
+                        android:valueTo="36" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/Mod9Layout"
+                    android:layout_width="75dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/Mod9Text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:text="8 kHz"
+                        android:textColor="@color/white"
+                        android:textSize="15sp" />
+
+                    <com.google.android.material.slider.Slider
+                        android:id="@+id/Mod9"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="100dp"
+                        android:rotation="270"
+                        android:stepSize="12.0"
+                        android:value="0"
+                        android:valueFrom="-36"
+                        android:valueTo="36" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/Mod10Layout"
+                    android:layout_width="75dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/Mod10Text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:text="16 kHz"
+                        android:textColor="@color/white"
+                        android:textSize="15sp" />
+
+                    <com.google.android.material.slider.Slider
+                        android:id="@+id/Mod10"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="100dp"
+                        android:rotation="270"
+                        android:stepSize="12.0"
+                        android:value="0"
+                        android:valueFrom="-36"
+                        android:valueTo="36" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+    </RelativeLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
